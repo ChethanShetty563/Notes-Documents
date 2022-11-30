@@ -7,3 +7,12 @@ Inorder to create the first impression for the employer, our resume and Linkedin
 ### Job Interview
 It is a conversation between a job applicant and the representatives of the employer.
 It is conducted to assess the skill set of applicant
+
+
+### Resume CheckList
+
+![[Pasted image 20221129213055.png]]
+
+Calculating the score:
+
+![[Pasted image 20221129213130.png]]
