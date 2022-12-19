@@ -155,3 +155,101 @@ Node adds an enormous amount of new functionality to JavaScript. Primarily, the 
  * Many functions in Node API emit events
  * These events are instance of events.EventEmitter
 * The following code sets Node's EventEmitter object as the prototype of a function constructor we define
+
+```JAvascript
+// File counter.js  
+// Load Node's 'events' module, and point directly to EventEmitter there  
+const EventEmitter = require('events').EventEmitter;  
+// Define our Counter function  
+const Counter = function(i) { // Takes a starting number  
+  this.increment = function() { // The counter's increment method  
+    i++; // Increment the count we hold  
+    this.emit('incremented', i); // Emit an event named incremented  
+  }  
+}  
+// Base our Counter on Node's EventEmitter  
+Counter.prototype = new EventEmitter(); // We did this afterwards, not before!  
+// Now that we've defined our objects, let's see them in action  
+// Make a new Counter starting at 10  
+const counter = new Counter(10);  
+// Define a callback function which logs the number n you give it  
+const callback = function(n) {  
+  console.log(n);  
+}  
+// Counter is an EventEmitter, so it comes with addListener  
+counter.addListener('incremented', callback);  
+counter.increment(); // 11  
+counter.increment(); // 12
+```
+
+With EventEmitter, Node can handle I/O data streams in an event-oriented manner, performing long-running tasks while keeping true to Node's principles of asynchronous, non-blocking programming:
+``` JAvascript
+// File stream.js  
+// Use Node's stream module, and get Readable inside  
+let Readable = require('stream').Readable;  
+// Make our own readable stream, named r  
+let r = new Readable;  
+// Start the count at 0  
+let count = 0;  
+// Downstream code will call r's _read function when it wants some data from r  
+r._read = function() {  
+  count++;  
+  if (count > 10) { // After our count has grown beyond 10  
+    return r.push(null); // Push null downstream to signal we've got no more data  
+  }  
+  setTimeout(() => r.push(count + '\n'), 500); // A half second from now, push our count on a line  
+};  
+// Have our readable send the data it produces to standard out  
+r.pipe(process.stdout);
+```
+
+This example creates a readable stream r, and pipes its output to the standard out. Every 500 milliseconds, code increments a counter and pushes a line of text with the current count downstream
+Node consistently implements I/O operations as asynchronous, evented data streams. This design choice enables Node's excellent performance. Instead of creating a thread (or spinning up an entire process) for a long-running task like a file upload that a stream may represent, Node only needs to commit the resources to handle callbacks. Additionally, in the long stretches of time in between the short moments when the stream is pushing data, Node's event loop is free to process other instructions.
+
+As an exercise, re-implement stream.js to send the data r produces to a file instead of the terminal
+
+```JAvascript
+// File stream2file.js
+
+// Bring in Node's file system module
+
+const fs = require('fs');
+
+// Make the file counter.txt we can fill by writing data to writeable stream w
+
+const w = fs.createWriteStream('./counter.txt', { flags: 'w', mode: 0666 });
+
+  
+
+let Readable = require('stream').Readable;
+
+  
+
+let r = new Readable();
+
+  
+
+let count = 0;
+
+  
+
+r._read = function () {
+
+  count++;
+
+  if (count > 10) {
+
+    return r.push(null);
+
+  }
+
+  setTimeout(() => r.push(count + '\n'), 500);
+
+};
+
+  
+
+// Put w beneath r instead
+
+r.pipe(w);
+```
