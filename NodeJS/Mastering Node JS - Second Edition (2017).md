@@ -210,46 +210,92 @@ As an exercise, re-implement stream.js to send the data r produces to a file
 
 ```JAvascript
 // File stream2file.js
-
 // Bring in Node's file system module
-
-const fs = require('fs');
-
+const fs = require('fs')
 // Make the file counter.txt we can fill by writing data to writeable stream w
-
 const w = fs.createWriteStream('./counter.txt', { flags: 'w', mode: 0666 });
-
-  
-
 let Readable = require('stream').Readable;
-
-  
-
 let r = new Readable();
-
-  
-
 let count = 0;
-
-  
-
 r._read = function () {
-
   count++;
-
   if (count > 10) {
-
     return r.push(null);
-
   }
-
   setTimeout(() => r.push(count + '\n'), 500);
-
 };
-
-  
-
 // Put w beneath r instead
 
 r.pipe(w);
 ```
+
+## Modularity
+
+***"Developers should build a program out of simple parts connected by well-defined interfaces, so problems are local, and parts of the program can be replaced in the future versions to support new features. This rule aims to save time on debugging complex code that is complex, long, and unreadable."***
+
+Normally you add the javscript to html in below way 
+
+```
+<head>  
+<script src="fileA.js"></script>  
+<script src="fileB.js"></script>  
+<script src="fileC.js"></script>  
+<script src="fileD.js"></script>  
+...  
+</head>
+```
+
+The above format works but leads to number of problems :
+* The page must declare all the possible dependencies before any are needed are used
+* The scripts are not encapsulated. Code in every file writes to same global object. Adding a new dependecy may break an earlier one
+* fileA cannot address filB as a collection
+
+Javascript needed a standard way to load and share discreet program and modules and found one in 2009 with the commoJs Module specification
+
+Node follows this specification, making it easy to define and share bits of reusable code called **modules** or **packages.**
+
+Metadata about the package, such as its name, version, and software license, lives in an additional file named package.json. The JSON contents of this file are easily both human and machine-readable. Let's take a look: 
+```
+{  
+  "name": "mypackage1",  
+  "version": "0.1.2",  
+  "dependencies": {  
+    "jquery": "^3.1.0",  
+    "bluebird": "^3.4.1",  
+  },  
+  "license": "MIT"  
+}
+```
+
+Version numbers follow the **Semantic Versioning (SemVer)** rules, with a pattern like Major.Minor.Patch. Looking at the incremented version numbers of a package your code has been using, here's what that means:
+-   **Major:** There's a change in the purpose or outcome of the API. If your code calls an updated function, it may break or produce an unintended result. Figure out what's changed, and determine if it affects your code.
+-   **Minor:** The package has added functionality, but remains compatible. Run all your tests, and you're good to go. Check out the documentation if you're curious, as there might be new, more advanced parts of the API alongside the functions and objects you're familiar with.
+-   **Patch:** The package fixed a bug, improved performance, or refactored a little. Run all your tests, and you're good to go.
+
+## The network
+
+* Node supports standard network protocols such as HTTP, TLS/SSL and UDP
+* With the above support we can easily build scalble programs compartivley to AJAX solutions
+
+Lets write a simple program that sends a UDP packet to another node :
+```
+const dgram = require('dgram');  
+let client = dgram.createSocket("udp4");  
+let server = dgram.createSocket("udp4");  
+let message = process.argv[2] || "message";  
+message = Buffer.from(message);  
+server  
+.on('message', msg => {  
+  process.stdout.write(`Got message: ${msg}\n`);  
+  process.exit();  
+})  
+.bind(41234);  
+client.send(message, 0, message.length, 41234, "localhost");
+```
+
+### V8, javascript and optimizations
+
+* V8 is Google's javascript engine, written in c++
+* It compiles and executes javascript code inside of a VM
+* V8 manages Node's main process thread.
+* When executing javscript, V8 does so in its own process and its internal behavior is not controlled by Node
