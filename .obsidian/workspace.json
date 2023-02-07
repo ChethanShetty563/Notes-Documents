@@ -4,91 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "6ff54a0a900ff934",
+        "id": "26dd6c0bd50a056b",
         "type": "tabs",
         "children": [
           {
-            "id": "21176dfd4506cfaa",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "05ce37730255f729",
+            "id": "14ca9c25fcf02ac4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/SQL.md",
+                "file": "Java/Core Java Interview Questions.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "ac8ddfe7599299f9",
+            "id": "64889d20b31d8d13",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/SQL.md",
+                "file": "ReactJS/Redux.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "1e74577954f5a310",
+            "id": "b2974b6dd38c2565",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/No SQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a10a6e3427564e52",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Database/No SQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "92a2befd2d24263f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DSA/Bit Magic.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f6ac26eee72061fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Daily Notes/14-Nov-2022.md",
+                "file": "NodeJS/Interview Questions and Answers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -154,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Notes/14-Nov-2022.md",
+                "file": "NodeJS/Interview Questions and Answers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Notes/14-Nov-2022.md",
+                "file": "NodeJS/Interview Questions and Answers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Notes/14-Nov-2022.md"
+                "file": "NodeJS/Interview Questions and Answers.md"
               }
             }
           }
@@ -202,20 +158,29 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "f6ac26eee72061fd",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b2974b6dd38c2565",
   "lastOpenFiles": [
-    "DSA/BitMagic/Check if Kth bit is set or not.md",
-    "Markdown/Markdown.md",
-    "Daily Notes/14-Nov-2022.md",
-    "Daily Notes/11-Nov-2022.md",
-    "DSA/Bit Magic.md",
-    "Database/No SQL.md",
-    "Database/MongoDB.md",
-    "Database/Introduction to Databases.md",
-    "Database/SQL.md",
-    "README.md"
+    "GraphQL/Introduction to GraphQL.md",
+    "ReactJS/Redux.md",
+    "Java/Core Java Interview Questions.md",
+    "Database/MySQL/Installing MySQL.md",
+    "Database/MongoDb/Basic Create Operation.md",
+    "Database/MongoDb/Basic Collections commands.md",
+    "Database/MongoDb/Basic Database Commands.md",
+    "Database/Interview Questions/MongoDB.md",
+    "Database/Interview Questions/SQL Interview Question.md",
+    "Database/No SQL or Not Only SQL.md"
   ]
 }
