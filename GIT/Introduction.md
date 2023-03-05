@@ -1,7 +1,3 @@
-## What is VC or Source Control?
+What is Git?
+Git is a version control system. It allows us to track the historyy of a project and collaborate with other people.
 
-## What is VCS?
-
-## Why we need VCS?
-
-## Types of VCS?
