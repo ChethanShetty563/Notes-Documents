@@ -336,3 +336,132 @@ It is the most important part in CSS. if you want to chnage the position of cont
 
 </html>
 ```
+
+#### CSS Overflow
+
+* Visible - default. The overflow is not clipped. The conetnt renders outside the element's box
+* hidden - The overflow is clipped, and the rest of the content will be invisble
+* Scroll - The overflow is clipped and scrollbar is added to see the rest of the content
+* auto - Similar to sccroll, but it adds scrollbars only when necessary
+
+``` html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        div {
+
+            width: 300px;
+
+            height: 400px;
+
+            background-color: forestgreen;
+
+            overflow: hidden; //
+                    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae fuga veniam! Blanditiis, neque. Architecto magni voluptatum eveniet itaque quaerat similique vero saepe. Quod deleniti beatae laborum omnis cumque mollitia? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi cum tenetur, amet tempore quaerat beatae. Praesentium, eaque, aut facilis exercitationem itaque dignissimos reiciendis consectetur excepturi iusto, et vitae consequatur dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam ea earum expedita nemo eveniet. Optio eius nisi laboriosam nam! Veniam praesentium nihil maiores atque laborum nulla dignissimos voluptatum velit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit amet porro, impedit eum incidunt quos corrupti laudantium! Aliquid dolor quaerat molestias. Corrupti consectetur dolorum culpa molestiae iure maiores, quia Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore provident amet esse quisquam ad quidem, magni vel exercitationem debitis illum neque numquam aliquam asperiores, voluptatibus vitae ducimus cupiditate dolores!</div>
+
+</body>
+
+</html>
+```
+
+#### Float
+
+The CSS Float property specifies how an element should float
+
+``` html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+  
+
+        .only {
+
+            background-color: hotpink;
+
+        }
+
+  
+
+        .second {
+
+            float: right;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="only">
+
+        <h1>Hello World this is h1</h1>
+
+        <h1 class="second"> this is second h1</h1>
+
+  
+
+    </div>
+
+  
+  
+
+ </body>
+
+</html>
+```
+
+DOM Model
+
+Document object model mostly used in JS
