@@ -13,7 +13,163 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Core Java Interview Questions.md",
+                "file": "GIT/Introduction to VCS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c1f2121a9206f17b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GIT/Git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "39c898a16f6a51bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DSA/BitMagic/Check if Kth bit is set or not.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "160fa6939063659e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/Maven Setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "87a97a6882005a34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/CSS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd7d390c0c546962",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/Basic Properties of CSS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fa584991fe9d53c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/Responsive design.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2077fada503cc3ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/Flexbox.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e8939c393e39e7aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/Transition.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dfadaba167c01e22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/Responsive design.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "810aed5377838974",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html/Flexbox.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "692b772fc9fdbf38",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Javascript/Getting started.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1ef4c2a30ea1f1c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Javascript/Basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2576c9d54182922d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GIT/Introduction to VCS.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,14 +193,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT/Introduction.md",
+                "file": "GIT/Introduction to VCS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -110,7 +266,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT/Introduction.md",
+                "file": "Javascript/Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +283,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT/Introduction.md",
+                "file": "Javascript/Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +306,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT/Introduction.md"
+                "file": "Javascript/Basics.md"
               }
             }
           }
@@ -170,18 +326,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b2974b6dd38c2565",
+  "active": "1ef4c2a30ea1f1c7",
   "lastOpenFiles": [
+    "Javascript/Getting started.md",
+    "Javascript/Basics.md",
+    "Html/Flexbox.md",
+    "Javascript",
+    "Html/Responsive design.md",
+    "Html/Animation.md",
+    "Html/Transition.md",
+    "Html/SASS.md",
+    "Html/HTML.md",
+    "Html/Basic Properties of CSS.md",
+    "Html/CSS.md",
+    "Markdown/Markdown.md",
+    "Java/Maven Setup.md",
+    "DSA/BitMagic/Check if Kth bit is set or not.md",
+    "GIT/Introduction to VCS.md",
+    "GIT/Git.md",
+    "Html",
+    "Java/Core Java Interview Questions.md",
+    "Java/Head_First_Java.md",
+    "Flutter",
     "NodeJS/Interview Questions and Answers.md",
+    "NodeJS/Mastering Node JS - Second Edition (2017).md",
     "GraphQL/Introduction to GraphQL.md",
     "ReactJS/Redux.md",
-    "Java/Core Java Interview Questions.md",
     "Database/MySQL/Installing MySQL.md",
     "Database/MongoDb/Basic Create Operation.md",
     "Database/MongoDb/Basic Collections commands.md",
     "Database/MongoDb/Basic Database Commands.md",
-    "Database/Interview Questions/MongoDB.md",
-    "Database/Interview Questions/SQL Interview Question.md",
-    "Database/No SQL or Not Only SQL.md"
+    "Database/Interview Questions/MongoDB.md"
   ]
 }
